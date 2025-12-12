@@ -63,6 +63,8 @@ rule RunMinimap:
     conda:
         "envs/general.yml"
     threads: config['minimap']['threads']
+    resources:
+        mem_mb=120000
     params:
         db = config['minimap']['db'],
         secondary = config['minimap']['secondary']
@@ -72,7 +74,7 @@ rule RunMinimap:
         os.path.join(CWD, "benchmarks", "{sample}.{piece}.RunMinimap.tsv")
     shell:
         "minimap2 -a -k 19 -w 10 -I 10G -g 5000 -r 2000 -N {params.secondary} "
-        "--lj-min-ratio 0.5 -A 2 -B 5 -O 5,56 -E 4,1 -z 400,50 --sam-hit-only "
+        "-A 2 -B 5 -O 5,56 -E 4,1 -z 400,50 --sam-hit-only "
         "-t {threads} {params.db} {input} 1> {output} 2> {log}"
 
 ##################################################
