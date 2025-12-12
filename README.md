@@ -1,4 +1,4 @@
-This repository is based on, and periodically synced with,
+This repository is based on
 [PacificBiosciences/pb-metagenomics-tools](https://github.com/PacificBiosciences/pb-metagenomics-tools).
 
 
