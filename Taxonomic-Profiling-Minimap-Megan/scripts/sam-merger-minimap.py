@@ -34,8 +34,8 @@ def add_skeleton_header(outfile):
     """
     with open(outfile, 'a') as fhout:
         fhout.write("@PG\tID:minimap2\tPN:minimap2\tVN:2.17-r941\t"
-                    "CL:minimap2 -a -k 19 -w 10 -I 10G -g 5000 -r 2000 -N 20 --lj-min-ratio 0.5 "
-                    "A 2 -B 5 -O 5,56 -E 4,1 -z 400,50 --sam-hit-only -t 24 DATABASE FASTA\n")
+                    "CL:minimap2 -ax "
+                    "map-ont -t 24 DATABASE FASTA\n")
     logging.info("add_skeleton_header: Added sham @PG header to output SAM.")
 
 def write_all_sams(samlist, outfile):
