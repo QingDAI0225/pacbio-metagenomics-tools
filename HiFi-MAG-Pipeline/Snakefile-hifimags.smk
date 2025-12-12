@@ -89,7 +89,7 @@ rule StopLongBinCheckm2:
 # Checkpoint 1: Fork 2 - Long contigs found, sample moves through Checkm2ContigAnalysis -> FilterCompleteContigs
 rule Checkm2ContigAnalysis:
     input:
-        db = os.path.join(CWD, "CheckM2_database", "uniref100.KO.1.dmnd"),
+      #  db = os.path.join(CWD, "CheckM2_database", "uniref100.KO.1.dmnd"),
         key = os.path.join(CWD, "1-long-contigs", "{sample}", "{sample}.bin_key.txt")
     output:
         os.path.join(CWD, "1-long-contigs", "{sample}", "checkm2", "quality_report.tsv")
@@ -555,7 +555,7 @@ rule MAGContigNames:
     benchmark:
         os.path.join(CWD, "benchmarks", "{sample}.MAGContigNames.tsv")
     shell:
-        "grep -h '>' {input.mag_dir}*.fa | cut -d'>' -f2 1> {output} 2> {log}"
+        "grep -h '>' {input.mag_dir}/*.fa | cut -d'>' -f2 1> {output} 2> {log}"
 
 # Checkpoint 2: Fork 2 - Bins passed filters; GTDBTkAnalysis -> GTDBTkCleanup -> MAGSummary -> MAGCopy -> MAGContigNames -> MAGmappingPlots -> MAGPlots
 rule MAGMappingPlots:
