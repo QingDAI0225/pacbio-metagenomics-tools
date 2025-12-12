@@ -1,3 +1,7 @@
+This repository is based on, and periodically synced with,
+[PacificBiosciences/pb-metagenomics-tools](https://github.com/PacificBiosciences/pb-metagenomics-tools).
+
+
 <h1 align="center"><img width="300px" src="docs/logo_pb-metagenomics-tools.svg"/></h1>
 
 <h1 align="center">pb-metagenomics-tools</h1>
