@@ -1,6 +1,8 @@
 This repository is based on
 [PacificBiosciences/pb-metagenomics-tools](https://github.com/PacificBiosciences/pb-metagenomics-tools).
 
+The core analysis logic is unchanged; I mainly added and tweaked a few scripts to make the workflows easier to run in parallel on SLURM-based HPC clusters (e.g. array jobs, path/module handling).
+
 
 <h1 align="center"><img width="300px" src="docs/logo_pb-metagenomics-tools.svg"/></h1>
 
