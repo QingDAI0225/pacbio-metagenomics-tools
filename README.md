@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/1115377158.svg)](https://doi.org/10.5281/zenodo.17981532)
+
 This repository is based on
 [PacificBiosciences/pb-metagenomics-tools](https://github.com/PacificBiosciences/pb-metagenomics-tools).
 
